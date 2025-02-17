@@ -69,9 +69,7 @@ class SceneManager:
             except:
                 pass
 
-        if self.image_path is None:
-            print('Warning: image_path not found for reconstruction')
-        elif not self.image_path.endswith('/'):
+        if self.image_path is not None and not self.image_path.endswith('/'):
             self.image_path += '/'
 
     #---------------------------------------------------------------------------
